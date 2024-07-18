@@ -26,7 +26,7 @@ function handleSubmit(e) {
     const cityInput = cityInputEl.val().trim();
     // if non-empty, make a call to the geo api to get city coordinates
     if (cityInput) {
-        const apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityInput}&limit=1&appid=${apiKey}`
+        const apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${cityInput}&limit=1&appid=${apiKey}`
         fetch(apiUrl).then(function (response) {
             if (response.ok) {
                 console.log(response);
@@ -48,7 +48,7 @@ function handleSubmit(e) {
 
 function fetchWeatherInfo(city) {
     // using the city's coordinates, make a call to the weather api
-    const apiUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${city.lat}&lon=${city.lon}&units=metric&appid=${apiKey}`
+    const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${city.lat}&lon=${city.lon}&units=metric&appid=${apiKey}`
     fetch(apiUrl).then(function (response) {
         if (response.ok) {
             console.log(response);
