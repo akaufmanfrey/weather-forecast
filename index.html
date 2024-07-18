@@ -18,15 +18,15 @@
     <title>Weather Forecast</title>
 </head>
 <body>
-    <h1>Weather Dashboard</h1>
+    <h1 class="bg-primary">Weather Dashboard</h1>
     <div id="container">
         <section id="cities" class="col-3">
             <form id="city-form">
                 <label for="city">Search your city here:</label>
-                <input id=city type="text" class="form-control"/>
-                <button type="submit">Search</button> 
+                <input id='city' type="text" class="form-control"/>
+                <button type="submit" class="bg-primary">Search</button> 
             </form>
-            <div class="search-history"></div>
+            <aside></aside>
         </section>
         <section id="weather" class="col-9"></section>
     </div>
@@ -42,5 +42,6 @@
       integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
